@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morish Chandra — Full-Stack Developer</title>
+<title>Morish Chandra — Full-Stack Developer & AI Contractor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -32,7 +32,6 @@
     cursor: default;
   }
  
-  /* NOISE OVERLAY */
   body::before {
     content: '';
     position: fixed;
@@ -43,7 +42,6 @@
     opacity: 0.35;
   }
  
-  /* GLOW BG */
   .glow-bg {
     position: fixed;
     border-radius: 50%;
@@ -55,7 +53,6 @@
   .glow-2 { width: 500px; height: 500px; background: rgba(0,200,255,0.04); bottom: 20%; left: -150px; }
   .glow-3 { width: 400px; height: 400px; background: rgba(123,97,255,0.05); top: 50%; right: 10%; }
  
-  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -100,10 +97,8 @@
   .nav-links a:hover { color: var(--accent); }
   .nav-links a:hover::after { transform: scaleX(1); }
  
-  /* SECTIONS */
   section { position: relative; z-index: 1; }
  
-  /* HERO */
   #hero {
     min-height: 100vh;
     display: flex;
@@ -148,7 +143,7 @@
   .hero-role {
     font-size: 1.05rem;
     color: var(--muted);
-    max-width: 520px;
+    max-width: 580px;
     line-height: 1.7;
     margin-bottom: 48px;
     opacity: 0;
@@ -200,7 +195,6 @@
   }
   .hero-scroll .line { width: 40px; height: 1px; background: var(--dim); }
  
-  /* STATS ROW */
   .stats-row {
     display: flex;
     gap: 0;
@@ -226,10 +220,7 @@
   }
   .stat-label { font-size: 0.78rem; color: var(--muted); margin-top: 6px; letter-spacing: 0.02em; }
  
-  /* SECTION HEADER */
-  .sec-header {
-    margin-bottom: 60px;
-  }
+  .sec-header { margin-bottom: 60px; }
   .sec-tag {
     font-family: 'DM Mono', monospace;
     font-size: 0.72rem;
@@ -251,7 +242,6 @@
   }
   .sec-subtitle { color: var(--muted); margin-top: 10px; font-size: 0.95rem; line-height: 1.6; max-width: 500px; }
  
-  /* ABOUT */
   #about {
     padding: 120px 60px;
     max-width: 1200px;
@@ -312,7 +302,6 @@
   .tech-tag.purple { background: rgba(123,97,255,0.06); border-color: rgba(123,97,255,0.15); }
   .tech-tag.white { background: rgba(232,237,245,0.05); border-color: rgba(232,237,245,0.12); }
  
-  /* EXPERIENCE */
   #experience {
     padding: 120px 60px;
     background: var(--bg2);
@@ -338,17 +327,8 @@
     letter-spacing: 0.06em;
     margin-bottom: 6px;
   }
-  .exp-company {
-    font-size: 0.85rem;
-    color: var(--muted);
-    font-weight: 500;
-  }
-  .exp-type {
-    font-size: 0.72rem;
-    color: var(--dim);
-    margin-top: 4px;
-    font-family: 'DM Mono', monospace;
-  }
+  .exp-company { font-size: 0.85rem; color: var(--muted); font-weight: 500; }
+  .exp-type { font-size: 0.72rem; color: var(--dim); margin-top: 4px; font-family: 'DM Mono', monospace; }
   .exp-content {}
   .exp-title {
     font-family: 'Syne', sans-serif;
@@ -386,7 +366,6 @@
     letter-spacing: 0.04em;
   }
  
-  /* PROJECTS */
   #projects {
     padding: 120px 60px;
     max-width: 1200px;
@@ -451,13 +430,23 @@
     border-radius: 3px;
     letter-spacing: 0.04em;
   }
+  .project-link {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--accent2);
+    text-decoration: none;
+    margin-top: 12px;
+    display: inline-block;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+  .project-link:hover { color: var(--accent); }
   .project-card.featured {
     grid-column: span 2;
     background: linear-gradient(135deg, #111820 0%, #0d1520 100%);
   }
   .project-card.featured .project-title { font-size: 1.4rem; }
  
-  /* EDUCATION */
   #education {
     padding: 100px 60px;
     background: var(--bg2);
@@ -501,23 +490,13 @@
     color: var(--accent);
     flex-shrink: 0;
   }
-  .edu-info {}
-  .edu-degree {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 6px;
-  }
+  .edu-degree { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 6px; }
   .edu-institute { color: var(--muted); font-size: 0.92rem; margin-bottom: 10px; }
   .edu-meta { display: flex; gap: 24px; }
-  .edu-meta-item {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.8rem;
-  }
+  .edu-meta-item { font-family: 'DM Mono', monospace; font-size: 0.8rem; }
   .edu-meta-item .label { color: var(--dim); }
-  .edu-meta-item .value { color: var(--accent); font-weight: 400; }
+  .edu-meta-item .value { color: var(--accent); }
  
-  /* ACHIEVEMENTS */
   #achievements {
     padding: 100px 60px;
     max-width: 1200px;
@@ -535,15 +514,10 @@
     transition: all 0.2s;
   }
   .ach-item:hover { border-color: rgba(0,255,163,0.25); }
-  .ach-icon {
-    font-size: 1.4rem;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
+  .ach-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
   .ach-text { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
   .ach-text strong { color: var(--text); font-weight: 500; display: block; margin-bottom: 4px; }
  
-  /* CONTACT */
   #contact {
     padding: 120px 60px;
     background: var(--bg2);
@@ -578,7 +552,6 @@
   .contact-link:hover { border-color: var(--accent); color: var(--accent); background: rgba(0,255,163,0.05); }
   .contact-link .icon { font-size: 1rem; }
  
-  /* FOOTER */
   footer {
     padding: 28px 60px;
     border-top: 1px solid var(--border);
@@ -590,7 +563,6 @@
   .footer-text { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--dim); }
   .footer-text span { color: var(--accent); }
  
-  /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -605,13 +577,11 @@
   .reveal-delay-2 { transition-delay: 0.2s; }
   .reveal-delay-3 { transition-delay: 0.3s; }
  
-  /* SCROLLBAR */
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-track { background: var(--bg); }
   ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
   ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
  
-  /* CURSOR */
   .cursor-dot {
     position: fixed;
     width: 6px; height: 6px;
@@ -661,7 +631,6 @@
 <div class="glow-bg glow-2"></div>
 <div class="glow-bg glow-3"></div>
  
-<!-- NAV -->
 <nav>
   <a class="nav-logo" href="#">Morish<span>.</span></a>
   <ul class="nav-links">
@@ -682,7 +651,7 @@
       <span class="line2">Chandra</span>
     </h1>
     <p class="hero-role">
-      <strong>Full-Stack Developer &amp; Freelance Software Engineer</strong> — building intelligent, scalable applications with <strong>React.js, Node.js, Firebase, and AWS</strong>. Specializing in AI/LLM integrations and end-to-end product development.
+      <strong>Full-Stack Developer &amp; AI Contractor</strong> — building intelligent applications and evaluating frontier AI coding agents for <strong>Anthropic via Scale AI</strong>. Specializing in FastAPI, React.js, LLM tooling, and end-to-end product development.
     </p>
     <div class="hero-ctas">
       <a href="#projects" class="btn-primary">View Projects</a>
@@ -695,8 +664,8 @@
         <div class="stat-label">Years of Development</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">5+</div>
-        <div class="stat-label">End-to-End Projects</div>
+        <div class="stat-num">10+</div>
+        <div class="stat-label">AI Eval Projects</div>
       </div>
       <div class="stat-item">
         <div class="stat-num">100+</div>
@@ -719,20 +688,20 @@
 <section id="about">
   <div class="sec-header reveal">
     <div class="sec-tag">About Me</div>
-    <h2 class="sec-title">Engineer. Developer.<br>Problem Solver.</h2>
+    <h2 class="sec-title">Engineer. Developer.<br>AI Evaluator.</h2>
   </div>
   <div class="about-grid">
     <div class="about-text reveal">
-      <p>B.Tech graduate in <strong>Metallurgical &amp; Materials Engineering from IIT Kharagpur</strong>, with a passion for building software that actually works at scale. I bridge the gap between analytical engineering thinking and modern software development.</p>
-      <p>I've shipped production-grade full-stack applications, integrated frontier AI APIs into real-world products, and evaluated cutting-edge AI coding agents for Anthropic. My work spans cloud infrastructure, IoT automation, and intelligent web applications.</p>
-      <p>Proficient in the complete development lifecycle — from <strong>system architecture and database design</strong> to deployment, CI/CD, and performance optimization.</p>
+      <p>B.Tech graduate in <strong>Metallurgical &amp; Materials Engineering from IIT Kharagpur</strong>, currently working as an AI Model Evaluator and Agentic Coding Contractor with <strong>Anthropic via Scale AI</strong>. I design adversarial benchmarks and evaluate frontier coding agents on real open-source codebases.</p>
+      <p>I've shipped production-grade full-stack applications, built developer tooling like <strong>promptscope</strong> (live REST API for LLM prompt analysis), and completed 10+ Boxing project runs comparing Claude Code vs. Codex CLI across repos like Litestar, Flowise, and Starlette.</p>
+      <p>Proficient in the full development lifecycle — from <strong>FastAPI backend design and database architecture</strong> to deployment, CI/CD, and AI evaluation pipelines.</p>
       <div class="skills-grid">
+        <div class="skill-chip"><span>→</span>FastAPI &amp; SQLAlchemy</div>
         <div class="skill-chip"><span>→</span>React.js &amp; Redux</div>
-        <div class="skill-chip"><span>→</span>Node.js / Express</div>
-        <div class="skill-chip"><span>→</span>Firebase &amp; MongoDB</div>
-        <div class="skill-chip"><span>→</span>AWS EC2</div>
-        <div class="skill-chip"><span>→</span>Python / OpenCV</div>
-        <div class="skill-chip"><span>→</span>Gemini / LLM APIs</div>
+        <div class="skill-chip"><span>→</span>LLM Evaluation</div>
+        <div class="skill-chip"><span>→</span>Docker &amp; AWS EC2</div>
+        <div class="skill-chip"><span>→</span>Claude / Gemini API</div>
+        <div class="skill-chip"><span>→</span>Prompt Engineering</div>
       </div>
     </div>
     <div class="about-aside reveal reveal-delay-2">
@@ -748,33 +717,38 @@
         </div>
       </div>
       <div class="tech-category">
-        <div class="tech-cat-label">Frontend</div>
+        <div class="tech-cat-label">Backend &amp; APIs</div>
         <div class="tech-tags">
-          <span class="tech-tag blue">React.js</span>
-          <span class="tech-tag blue">Redux</span>
-          <span class="tech-tag blue">Tailwind CSS</span>
-          <span class="tech-tag blue">Figma</span>
+          <span class="tech-tag blue">FastAPI</span>
+          <span class="tech-tag blue">Node.js</span>
+          <span class="tech-tag blue">Express.js</span>
+          <span class="tech-tag blue">SQLAlchemy</span>
+          <span class="tech-tag blue">Pydantic</span>
+          <span class="tech-tag blue">JWT Auth</span>
         </div>
       </div>
       <div class="tech-category">
-        <div class="tech-cat-label">Backend &amp; Cloud</div>
+        <div class="tech-cat-label">Frontend &amp; Cloud</div>
         <div class="tech-tags">
-          <span class="tech-tag purple">Node.js</span>
-          <span class="tech-tag purple">Express.js</span>
+          <span class="tech-tag purple">React.js</span>
+          <span class="tech-tag purple">Redux</span>
+          <span class="tech-tag purple">Tailwind CSS</span>
           <span class="tech-tag purple">AWS EC2</span>
           <span class="tech-tag purple">Firebase</span>
-          <span class="tech-tag purple">MongoDB</span>
-          <span class="tech-tag purple">GitHub Actions</span>
+          <span class="tech-tag purple">Railway</span>
+          <span class="tech-tag purple">Vercel</span>
         </div>
       </div>
       <div class="tech-category">
-        <div class="tech-cat-label">AI / ML &amp; Tools</div>
+        <div class="tech-cat-label">AI / ML &amp; Eval Tools</div>
         <div class="tech-tags">
+          <span class="tech-tag white">Claude API</span>
           <span class="tech-tag white">Gemini API</span>
           <span class="tech-tag white">OpenCV</span>
           <span class="tech-tag white">MediaPipe</span>
-          <span class="tech-tag white">Claude Code</span>
-          <span class="tech-tag white">Prompt Engineering</span>
+          <span class="tech-tag white">tmux</span>
+          <span class="tech-tag white">mitmproxy</span>
+          <span class="tech-tag white">Docker</span>
         </div>
       </div>
     </div>
@@ -799,17 +773,23 @@
         <div class="exp-content">
           <div class="exp-title">AI Model Evaluator &amp; Agentic Coding Contractor</div>
           <ul class="exp-bullets">
-            <li>Evaluated and benchmarked frontier AI coding agents (Gemini CLI, Claude Code) on real-world software engineering tasks using the Flask open-source codebase.</li>
-            <li>Designed ambiguous prompt scenarios to surface model failure modes — hallucination, underspecified requirement handling, and contextual ambiguity in agentic workflows.</li>
-            <li>Performed deep codebase research evaluations, cross-referencing file paths, line numbers, and execution flows against model-generated outputs for factual grounding.</li>
-            <li>Produced structured evaluation reports directly informing model improvement cycles at Anthropic.</li>
+            <li>Authored adversarial agentic-coding benchmark tasks for Anthropic's post-training pipeline, targeting failure modes in multi-file edits, tool use, and long-horizon code reasoning on real OSS Python codebases.</li>
+            <li>Completed 10+ Boxing project runs comparing Claude Code vs. Codex CLI (claude-obsidian, claude-quartz, claude-marble vs. gpt-5.5) across repos including Litestar, CLI11, encode/httpx, Flowise, and Starlette — managing full toolchain: tmux logging, mitmproxy, Trace Extractor v1.11–1.12, and artifact collection.</li>
+            <li>Designed adversarial prompts for Boxing "Create Challenging Prompts" tasks targeting Task Success ≤ 2, stress-testing frontier model instruction-following and multi-step code reasoning.</li>
+            <li>Built <strong>promptscope</strong> — FastAPI + Typer CLI tool for LLM prompt quality analysis with SQLite history, batch scoring, CSV export, and trend visualization. Live at web-production-70461.up.railway.app</li>
+            <li>Built <strong>Forge</strong> — FastAPI/SQLAlchemy personal finance engine (44+ commits, 146 passing tests) with deliberately planted "Silver seeds" bugs for AfterQuery Project Silver benchmark generation.</li>
+            <li>Completed AfterQuery Project Pluto / Terminal-Bench: broken-environment benchmarks in Harbor zip-upload format with Docker build context and rubrics for Sonnet 4.6 difficulty calibration.</li>
+            <li>Cleared Thorium background verification; qualified for Teaching AI, Macaroon, Boxing, and Holodeck project families.</li>
           </ul>
           <div class="exp-tags">
             <span class="exp-tag">Claude Code</span>
-            <span class="exp-tag">Gemini CLI</span>
+            <span class="exp-tag">FastAPI</span>
             <span class="exp-tag">LLM Evaluation</span>
-            <span class="exp-tag">Flask</span>
-            <span class="exp-tag">Linux</span>
+            <span class="exp-tag">Docker</span>
+            <span class="exp-tag">Prompt Engineering</span>
+            <span class="exp-tag">Python</span>
+            <span class="exp-tag">tmux</span>
+            <span class="exp-tag">mitmproxy</span>
           </div>
         </div>
       </div>
@@ -824,15 +804,17 @@
           <div class="exp-title">Freelance Software Developer</div>
           <ul class="exp-bullets">
             <li>Designed, developed, and deployed 5+ end-to-end projects spanning full-stack web development, cloud infrastructure, IoT automation, and AI-integrated applications.</li>
-            <li>Architected and shipped StudyNotion (MERN ed-tech platform) and Shadow Monarch (AI-powered gamified productivity app).</li>
-            <li>Implemented CI/CD pipelines via GitHub Actions, cloud deployments on AWS and Firebase Hosting, and RESTful API integrations.</li>
+            <li>Architected and shipped StudyNotion (MERN ed-tech platform with Razorpay + Cloudinary) and Shadow Monarch (AI-powered gamified productivity app with Gemini API).</li>
+            <li>Built voice and gesture-controlled automation systems integrating Python, OpenCV, MediaPipe, and Arduino hardware.</li>
+            <li>Implemented CI/CD pipelines via GitHub Actions, cloud deployments on AWS and Firebase Hosting, and RESTful API integrations with third-party payment and media services.</li>
           </ul>
           <div class="exp-tags">
             <span class="exp-tag">MERN Stack</span>
             <span class="exp-tag">Firebase</span>
             <span class="exp-tag">AWS</span>
             <span class="exp-tag">Gemini API</span>
-            <span class="exp-tag">CI/CD</span>
+            <span class="exp-tag">OpenCV</span>
+            <span class="exp-tag">Arduino</span>
           </div>
         </div>
       </div>
@@ -846,9 +828,9 @@
         <div class="exp-content">
           <div class="exp-title">Technical Mentor — Software &amp; DSA</div>
           <ul class="exp-bullets">
-            <li>Guided 100+ students through Data Structures, Algorithms, and software development — directly improving competitive programming and placement outcomes.</li>
-            <li>Designed structured learning paths and code review sessions, fostering problem-solving skills in Python and C++.</li>
-            <li>Recognized for high student satisfaction scores across multiple cohorts.</li>
+            <li>Guided 100+ students through Data Structures, Algorithms, and software development, directly improving competitive programming and placement outcomes.</li>
+            <li>Designed structured learning paths and code review sessions in Python and C++; recognized for high student satisfaction scores across cohorts.</li>
+            <li>Developed communication, technical leadership, and curriculum planning skills.</li>
           </ul>
           <div class="exp-tags">
             <span class="exp-tag">Python</span>
@@ -889,15 +871,64 @@
   <div class="sec-header reveal">
     <div class="sec-tag">Projects</div>
     <h2 class="sec-title">What I've Shipped.</h2>
-    <p class="sec-subtitle">End-to-end projects spanning full-stack web, AI integrations, cloud infrastructure, and hardware automation.</p>
+    <p class="sec-subtitle">End-to-end projects spanning AI tooling, full-stack web, cloud infrastructure, and hardware automation.</p>
   </div>
   <div class="projects-grid">
  
     <div class="project-card featured reveal">
       <div class="project-num">01 — Featured</div>
+      <div class="project-title">promptscope — LLM Prompt Quality Analyzer</div>
+      <div class="project-desc">
+        CLI + REST API tool to score any LLM prompt across 5 quality dimensions — clarity, specificity, goal alignment, instruction-following likelihood, and ambiguity risk — with Claude-powered rewrite suggestions. Features batch scoring from file, head-to-head compare, SQLite history, ASCII trend chart, CSV/JSON export, and mock mode for offline use. Deployed live on Railway.
+      </div>
+      <div class="project-stack">
+        <span class="stack-item">FastAPI</span>
+        <span class="stack-item">Typer</span>
+        <span class="stack-item">Rich</span>
+        <span class="stack-item">SQLite</span>
+        <span class="stack-item">Claude API</span>
+        <span class="stack-item">Railway</span>
+        <span class="stack-item">Python</span>
+      </div>
+      <a href="https://github.com/morish13/promptscope" target="_blank" class="project-link">↗ github.com/morish13/promptscope &nbsp;|&nbsp; Live: web-production-70461.up.railway.app/docs</a>
+    </div>
+
+    <div class="project-card reveal reveal-delay-1">
+      <div class="project-num">02</div>
+      <div class="project-title">Forge — Personal Finance Engine</div>
+      <div class="project-desc">
+        FastAPI/SQLAlchemy personal finance backend built for AfterQuery Project Silver. 44+ commits, 146 passing tests. Deliberately contains subtle planted bugs ("Silver seeds") across transaction logic and budget calculations to generate AI benchmark task candidates.
+      </div>
+      <div class="project-stack">
+        <span class="stack-item">FastAPI</span>
+        <span class="stack-item">SQLAlchemy</span>
+        <span class="stack-item">pytest</span>
+        <span class="stack-item">SQLite</span>
+        <span class="stack-item">Python</span>
+      </div>
+      <a href="https://github.com/morish13/Forge" target="_blank" class="project-link">↗ github.com/morish13/Forge</a>
+    </div>
+
+    <div class="project-card reveal reveal-delay-2">
+      <div class="project-num">03</div>
+      <div class="project-title">World Cup 2026 Tracker</div>
+      <div class="project-desc">
+        Live web app tracking FIFA World Cup 2026 fixtures and results. Deployed on Vercel with Google AdSense and Search Console configured for monetization and indexing.
+      </div>
+      <div class="project-stack">
+        <span class="stack-item">React.js</span>
+        <span class="stack-item">Vercel</span>
+        <span class="stack-item">Google AdSense</span>
+        <span class="stack-item">Search Console</span>
+      </div>
+      <a href="https://worldcup26-rose.vercel.app" target="_blank" class="project-link">↗ worldcup26-rose.vercel.app</a>
+    </div>
+ 
+    <div class="project-card featured reveal">
+      <div class="project-num">04 — Featured</div>
       <div class="project-title">StudyNotion — Full-Stack Ed-Tech Platform</div>
       <div class="project-desc">
-        Production-grade ed-tech platform using the MERN stack enabling seamless educational content creation and consumption. Features JWT authentication with Bcrypt, Razorpay payment integration, Cloudinary media management, and Redux state management across student dashboards, course catalogs, and instructor portals. Deployed on multi-cloud: Vercel + Render + MongoDB Atlas.
+        Production-grade ed-tech platform using the MERN stack enabling seamless educational content creation and consumption. Features JWT authentication with Bcrypt, OTP verification, Razorpay payment integration, Cloudinary media management, and Redux state management across student dashboards, course catalogs, cart checkout, wishlists, and instructor portals. Multi-cloud deployment: Vercel + Render + MongoDB Atlas.
       </div>
       <div class="project-stack">
         <span class="stack-item">MongoDB</span>
@@ -911,11 +942,11 @@
       </div>
     </div>
  
-    <div class="project-card reveal reveal-delay-1">
-      <div class="project-num">02</div>
+    <div class="project-card reveal">
+      <div class="project-num">05</div>
       <div class="project-title">Shadow Monarch — AI Gamified Productivity</div>
       <div class="project-desc">
-        Full-stack gamified productivity app with Google Gemini AI generating personalized daily quests and real-time motivational feedback. Custom linear XP-progression algorithm, Firebase Auth, Cloud Firestore with per-user data isolation, and automated CI/CD via GitHub Actions.
+        Full-stack gamified productivity app with Gemini AI generating personalized daily quests and real-time motivational feedback. Custom XP-progression algorithm, Firebase Auth, Cloud Firestore, and GitHub Actions CI/CD for zero-downtime releases.
       </div>
       <div class="project-stack">
         <span class="stack-item">React.js</span>
@@ -926,11 +957,11 @@
       </div>
     </div>
  
-    <div class="project-card reveal reveal-delay-2">
-      <div class="project-num">03</div>
-      <div class="project-title">NLU-Based Computer Control System</div>
+    <div class="project-card reveal reveal-delay-1">
+      <div class="project-num">06</div>
+      <div class="project-title">NLU Computer Control System</div>
       <div class="project-desc">
-        Cross-platform voice assistant using Gemini 1.5 Flash to automate desktop tasks through NLP. Transforms unstructured voice input into structured JSON commands with multi-entity extraction, chained task processing, and cross-platform OS compatibility.
+        Cross-platform voice assistant using Gemini 1.5 Flash to automate desktop tasks through NLP. Transforms unstructured voice input into structured JSON commands with multi-entity extraction and chained task processing.
       </div>
       <div class="project-stack">
         <span class="stack-item">Python</span>
@@ -939,12 +970,12 @@
         <span class="stack-item">PyAutoGUI</span>
       </div>
     </div>
- 
-    <div class="project-card reveal">
-      <div class="project-num">04</div>
+
+    <div class="project-card reveal reveal-delay-2">
+      <div class="project-num">07</div>
       <div class="project-title">Home Automation — Gesture &amp; Voice Control</div>
       <div class="project-desc">
-        Real-time system for controlling household electronics via hand gesture recognition and voice commands with sub-200ms response latency. Uses MediaPipe Hands for 21-point landmark detection mapped to Arduino relay modules.
+        Real-time system controlling household electronics via hand gesture recognition and voice commands with sub-200ms latency. Uses MediaPipe Hands for 21-point landmark detection mapped to Arduino relay modules.
       </div>
       <div class="project-stack">
         <span class="stack-item">Python</span>
@@ -954,12 +985,12 @@
         <span class="stack-item">SpeechRecognition</span>
       </div>
     </div>
- 
-    <div class="project-card reveal reveal-delay-1">
-      <div class="project-num">05</div>
+
+    <div class="project-card reveal reveal-delay-3">
+      <div class="project-num">08</div>
       <div class="project-title">AWS EC2 — Cloud Infrastructure Setup</div>
       <div class="project-desc">
-        Configured and deployed an EC2 instance on Ubuntu Server 24.04 LTS with custom AMI, Elastic IP allocation, SSH access configuration, and inbound/outbound security group policies for persistent, reliable production endpoints.
+        Configured and deployed an EC2 instance on Ubuntu Server 24.04 LTS with custom AMI, Elastic IP allocation, SSH access, inbound/outbound security group policies, and application-specific storage volumes.
       </div>
       <div class="project-stack">
         <span class="stack-item">AWS EC2</span>
@@ -1023,10 +1054,10 @@
       </div>
     </div>
     <div class="ach-item reveal reveal-delay-3">
-      <div class="ach-icon">🧘</div>
+      <div class="ach-icon">🤖</div>
       <div class="ach-text">
-        <strong>NSO — National Sports Organization</strong>
-        Active member from Dec 2021 – Apr 2023: Meditation, Yoga, Disaster Management Training, and Cleanliness Drives.
+        <strong>Anthropic Contractor — Thorium Verified</strong>
+        Cleared Thorium background verification and qualified for advanced project families: Teaching AI, Macaroon, Boxing, and Holodeck.
       </div>
     </div>
   </div>
@@ -1037,7 +1068,7 @@
   <div class="contact-inner reveal">
     <div class="sec-tag" style="justify-content:center;">Contact</div>
     <div class="contact-title">Let's Build<br><span>Something.</span></div>
-    <p class="contact-desc">I'm currently open to freelance projects, full-time roles, and interesting collaborations. Whether you have a project in mind or just want to connect — reach out.</p>
+    <p class="contact-desc">I'm currently open to freelance projects, AI contractor roles, full-time positions, and interesting collaborations. Whether you have a project in mind or just want to connect — reach out.</p>
     <div class="contact-links">
       <a href="mailto:morishchandra123@gmail.com" class="contact-link">
         <span class="icon">✉</span> morishchandra123@gmail.com
@@ -1048,19 +1079,20 @@
       <a href="https://linkedin.com/in/morish-chandra" target="_blank" class="contact-link">
         <span class="icon">in</span> LinkedIn
       </a>
+      <a href="https://github.com/morish13" target="_blank" class="contact-link">
+        <span class="icon">⌥</span> github.com/morish13
+      </a>
     </div>
     <a href="mailto:morishchandra123@gmail.com" class="btn-primary" style="font-size:1rem;padding:18px 48px;">Send a Message →</a>
   </div>
 </section>
  
-<!-- FOOTER -->
 <footer>
   <div class="footer-text">© 2025 <span>Morish Chandra</span> — Designed &amp; Built with precision.</div>
   <div class="footer-text">IIT Kharagpur · Kolkata, India</div>
 </footer>
  
 <script>
-  // Custom cursor
   const dot = document.getElementById('cursorDot');
   const ring = document.getElementById('cursorRing');
   let mx = 0, my = 0, rx = 0, ry = 0;
@@ -1087,15 +1119,13 @@
       ring.style.borderColor = 'rgba(0,255,163,0.4)';
     });
   });
- 
-  // Scroll reveal
+
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
   }, { threshold: 0.12 });
   reveals.forEach(r => observer.observe(r));
- 
-  // Active nav highlight
+
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
   window.addEventListener('scroll', () => {
